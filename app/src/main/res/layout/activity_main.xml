@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchParent"
+    tools:context="com.nrs.nsnik.signinmodule.MainActivity">
+
+    <include
+        android:id="@+id/mainToolbar"
+        layout="@layout/toolbar" />
+
+    <com.nrs.nsnik.signinmodule.UnScrollableViewPager
+        android:id="@+id/mainViewPager"
+        style="@style/matchParent"
+        android:layout_below="@id/mainToolbar" />
+
+</RelativeLayout>

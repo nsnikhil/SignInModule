@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/matchParent"
+    tools:context="com.nrs.nsnik.signinmodule.fragments.ExtraDetailsFragment">
+
+    <LinearLayout
+        style="@style/wrapContent"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/sixteen"
+        android:orientation="vertical">
+
+    <TextView
+        style="@style/wrapContent"
+        android:textSize="36sp"
+        android:padding="@dimen/eight"
+        android:gravity="center"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/extraHeading"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/stretchedVertically"
+            android:padding="@dimen/eight">
+
+            <android.support.design.widget.TextInputEditText
+                style="@style/stretchedVertically"
+                android:id="@+id/extraPhoneNo"
+                android:hint="@string/extraPhoneno"
+                android:maxLength="10"
+                android:inputType="phone" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

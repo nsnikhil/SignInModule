@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1037928882269",
+    "project_id": "firebase-signin-module"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037928882269:android:3fffabd228e3e76e",
+        "android_client_info": {
+          "package_name": "com.nrs.nsnik.signinmodule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037928882269-7unsjrf7nm1r5td62gul14i2j65vn8nj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nrs.nsnik.signinmodule",
+            "certificate_hash": "dd350f0e463d7a96bdb4eb5fc41cce8653c7102b"
+          }
+        },
+        {
+          "client_id": "1037928882269-4mecggjl6tvovdl11u14mhunpsig1rtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAorHzElIfS_Biw-pTn9SXUQxv03LBfOc0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

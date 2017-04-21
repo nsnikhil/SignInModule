@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SignIn Module</string>
+    <string name="signInError">SignIn Error</string>
+    <string name="extraHeading">Just a few extra details</string>
+    <string name="extraPhoneno">Phone no</string>
+
+
+    <!--SignInAttributes-->
+    <string name="singInName">singname</string>
+    <string name="singInEmail">singemail</string>
+    <string name="singInPhone">singphone</string>
+    <string name="signInStatus">singstatus</string>
+    <!-- -->
+</resources>
