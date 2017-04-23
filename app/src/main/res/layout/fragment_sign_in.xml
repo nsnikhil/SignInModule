@@ -3,7 +3,6 @@
     style="@style/matchParent"
     tools:context="com.nrs.nsnik.signinmodule.fragments.SignInFragment">
 
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singInGoogleButton"
         style="@style/wrapContent"

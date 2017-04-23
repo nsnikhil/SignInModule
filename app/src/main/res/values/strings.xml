@@ -2,6 +2,7 @@
     <string name="app_name">SignIn Module</string>
     <string name="signInError">SignIn Error</string>
     <string name="extraHeading">Just a few extra details</string>
+    <string name="verify">Verify</string>
     <string name="extraPhoneno">Phone no</string>
 
 
