@@ -3,7 +3,14 @@
     <string name="signInError">SignIn Error</string>
     <string name="extraHeading">Just a few extra details</string>
     <string name="verify">Verify</string>
+    <string name="permission">We need a few permissions to continue…</string>
+    <string name="grantpermission">Grant Permission</string>
     <string name="extraPhoneno">Phone no</string>
+    <string name="imageContentInfo">image</string>
+    <string name="imageContentError">imageError</string>
+    <string name="logo">App Name</string>
+    <string name="terms">By Continuing you agree to the terms and condition</string>
+    <string name="signin">Sign in using any one service</string>
 
 
     <!--SignInAttributes-->
@@ -11,5 +18,8 @@
     <string name="singInEmail">singemail</string>
     <string name="singInPhone">singphone</string>
     <string name="signInStatus">singstatus</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- -->
 </resources>

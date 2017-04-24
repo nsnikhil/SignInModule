@@ -4,13 +4,8 @@
     style="@style/matchParent"
     tools:context="com.nrs.nsnik.signinmodule.MainActivity">
 
-    <include
-        android:id="@+id/mainToolbar"
-        layout="@layout/toolbar" />
-
     <com.nrs.nsnik.signinmodule.UnScrollableViewPager
         android:id="@+id/mainViewPager"
-        style="@style/matchParent"
-        android:layout_below="@id/mainToolbar" />
+        style="@style/matchParent" />
 
 </RelativeLayout>

@@ -5,8 +5,11 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -26,6 +29,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.nrs.nsnik.signinmodule.R;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -92,13 +98,46 @@ public class SignInFragment extends Fragment implements View.OnClickListener,Goo
                 spf.edit().putBoolean(getActivity().getResources().getString(R.string.signInStatus),true).apply();
                 if(acct.getPhotoUrl()!=null){
                     downloadProfilePic(acct.getPhotoUrl().toString());
+                }else {
+                    try {
+                        saveFile(BitmapFactory.decodeResource(getActivity().getResources(),R.drawable.profile));
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
                 }
-                ViewPager vp = (ViewPager) getActivity().findViewById(R.id.mainViewPager);
-                vp.setCurrentItem(1,true);
+               swipePager(2);
             }
         } else {
             Toast.makeText(getActivity(),getActivity().getResources().getString(R.string.signInError),Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void saveFile(Bitmap image) throws FileNotFoundException {
+        FileOutputStream fos;
+        fos =  new FileOutputStream(new File(getActivity().getExternalCacheDir(),"profile.jpg"));
+        image.compress(Bitmap.CompressFormat.JPEG, 20,fos);
+        try {
+            fos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void swipePager(final int to){
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                ViewPager vp = (ViewPager) getActivity().findViewById(R.id.mainViewPager);
+                vp.setCurrentItem(to,true);
+            }
+        }, 1000);
+
     }
 
     private void downloadProfilePic(String url) {

@@ -1,15 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/matchParent"
-    tools:context="com.nrs.nsnik.signinmodule.fragments.SignInFragment">
+    tools:context="com.nrs.nsnik.signinmodule.fragments.TermsFragment">
 
 
     <TextView
         style="@style/wrapContent"
-        android:text="@string/signin"
+        android:text="@string/terms"
+        android:layout_centerInParent="true"
         android:padding="@dimen/sixteen"
         android:textSize="36sp"
-        android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:fontFamily="sans-serif-thin"
         android:textColor="@color/white"
@@ -17,10 +17,13 @@
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"/>
 
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/singInGoogleButton"
-        style="@style/wrapContent"
-        android:layout_centerInParent="true" />
+    <ImageView
+        android:contentDescription="@string/imageContentInfo"
+        android:id="@+id/termsNextIcon"
+        android:layout_width="96dp"
+        android:src="@drawable/next_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="96dp" />
 
 </RelativeLayout>

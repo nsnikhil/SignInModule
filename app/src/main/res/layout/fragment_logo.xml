@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nrs.nsnik.signinmodule.fragments.LogoFragment">
+
+    <LinearLayout
+       style="@style/wrapContent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+    <ImageView
+        android:contentDescription="@string/imageContentInfo"
+        style="@style/errorImage"
+        android:src="@drawable/logowhite"
+        android:visibility="visible" />
+
+    <TextView
+        style="@style/wrapContent"
+        android:text="@string/logo"
+        android:padding="@dimen/sixteen"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/sixteen"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:contentDescription="@string/imageContentInfo"
+        android:id="@+id/logoNextIcon"
+        android:layout_width="96dp"
+        android:src="@drawable/next_icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="96dp" />
+
+</RelativeLayout>

@@ -1,7 +1,9 @@
 {
   "project_info": {
     "project_number": "1037928882269",
-    "project_id": "firebase-signin-module"
+    "firebase_url": "https://fir-signin-module.firebaseio.com",
+    "project_id": "firebase-signin-module",
+    "storage_bucket": "firebase-signin-module.appspot.com"
   },
   "client": [
     {
@@ -13,12 +15,16 @@
       },
       "oauth_client": [
         {
-          "client_id": "1037928882269-7unsjrf7nm1r5td62gul14i2j65vn8nj.apps.googleusercontent.com",
+          "client_id": "1037928882269-jnre5fa0s3tdvkon430djrf637pidrg8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.nrs.nsnik.signinmodule",
-            "certificate_hash": "dd350f0e463d7a96bdb4eb5fc41cce8653c7102b"
+            "certificate_hash": "b2983479124e74777fe374c165983420aaceccc8"
           }
+        },
+        {
+          "client_id": "1037928882269-vei1dbvvs5bshle0tqjur16e8apmiush.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "1037928882269-4mecggjl6tvovdl11u14mhunpsig1rtv.apps.googleusercontent.com",
@@ -35,11 +41,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037928882269-vei1dbvvs5bshle0tqjur16e8apmiush.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
