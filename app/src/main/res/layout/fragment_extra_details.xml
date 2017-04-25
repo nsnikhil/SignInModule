@@ -51,13 +51,4 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:contentDescription="@string/imageContentInfo"
-        android:id="@+id/extraNextIcon"
-        android:layout_width="96dp"
-        android:src="@drawable/next_icon"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_height="96dp" />
-
 </RelativeLayout>

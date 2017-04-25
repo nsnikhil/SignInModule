@@ -3,9 +3,11 @@
     <string name="signInError">SignIn Error</string>
     <string name="extraHeading">Just a few extra details</string>
     <string name="verify">Verify</string>
+    <string name="retry">Retry</string>
     <string name="permission">We need a few permissions to continue…</string>
     <string name="grantpermission">Grant Permission</string>
     <string name="extraPhoneno">Phone no</string>
+    <string name="veificationcode">Verification Code</string>
     <string name="imageContentInfo">image</string>
     <string name="imageContentError">imageError</string>
     <string name="logo">App Name</string>
@@ -21,5 +23,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- -->
+
+    <!-- BundleExtra-->
+    <string name="bundleExtraRandom">bndlextrnd</string>
     <!-- -->
 </resources>

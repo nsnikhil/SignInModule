@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/verticalLinearLayout"
+    android:layout_width="@dimen/drawerWidth"
+    tools:context="com.nrs.nsnik.signinmodule.fragments.dialogFragments.VerifyDialogFragment">
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/stretchedVertically"
+        android:padding="@dimen/eight">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/verifyCodeField"
+            style="@style/stretchedVertically"
+            android:backgroundTint="@color/white"
+            android:hint="@string/veificationcode"
+            android:inputType="number"
+            android:maxLength="4" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        style="@style/horizontalLinearLayout"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/sixteen">
+
+        <Button
+            android:id="@+id/verifyCodeRetry"
+            style="@style/wrapContent"
+            android:layout_width="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/eight"
+            android:layout_weight="1"
+            android:text="@string/retry"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/buttonColor" />
+
+        <Button
+            android:id="@+id/verifyCodeButton"
+            style="@style/wrapContent"
+            android:layout_width="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/eight"
+            android:layout_weight="1"
+            android:text="@string/verify"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/buttonColor" />
+
+    </LinearLayout>
+
+</LinearLayout>
