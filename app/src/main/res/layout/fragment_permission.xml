@@ -45,19 +45,6 @@
                 android:textStyle="bold"
                 android:theme="@style/buttonColor" />
 
-            <Button
-                android:id="@+id/profilePermissionCheck"
-                style="@style/wrapContent"
-                android:layout_below="@id/profilePermissionHead"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/sixteen"
-                android:text="@string/grantpermission"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:theme="@style/buttonColor" />
-
         </RelativeLayout>
     </ScrollView>
 

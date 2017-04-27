@@ -73,9 +73,17 @@ public class SignInFragment extends Fragment implements View.OnClickListener,Goo
         View v =  inflater.inflate(R.layout.fragment_sign_in, container, false);
         mUnbinder = ButterKnife.bind(this,v);
         initialize();
+        deleteOld();
         listeners();
         initializeGoogleClients();
         return v;
+    }
+
+    private void deleteOld(){
+        File f =  new File(getActivity().getExternalCacheDir(),"profile.jpg");
+        if(f.exists()){
+            f.delete();
+        }
     }
 
     private void listeners() {
@@ -238,6 +246,8 @@ public class SignInFragment extends Fragment implements View.OnClickListener,Goo
         }, 1000);
 
     }
+
+
 
     private void downloadProfilePic(String url) {
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));

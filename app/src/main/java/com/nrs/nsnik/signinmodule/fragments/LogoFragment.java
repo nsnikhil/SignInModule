@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.nrs.nsnik.signinmodule.R;
@@ -35,6 +37,8 @@ public class LogoFragment extends Fragment {
     }
 
     private void listeners(){
+        Animation shake = AnimationUtils.loadAnimation(getActivity(),R.anim.shake);
+        mNextIcon.startAnimation(shake);
         mNextIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

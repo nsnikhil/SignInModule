@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -18,6 +19,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,6 +28,7 @@ import android.widget.Toast;
 
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.nrs.nsnik.signinmodule.R;
+import com.nrs.nsnik.signinmodule.interfaces.Pager;
 
 import java.io.File;
 
@@ -33,12 +37,11 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 
-public class PermissionFragment extends Fragment {
+public class PermissionFragment extends Fragment{
 
     @BindView(R.id.profileImage) CircularImageView mProfileImage;
     @BindView(R.id.profileName) TextView mProfileName;
     @BindView(R.id.profileNextIcon) ImageView mNext;
-    @BindView(R.id.profilePermissionCheck) Button mCheckButton;
     private static final int SMS_REQUEST_CODE = 564;
     private static final String NULL_VALUE =  "N/A";
 
@@ -55,23 +58,20 @@ public class PermissionFragment extends Fragment {
         View v =  inflater.inflate(R.layout.fragment_permission, container, false);
         mUnbinder = ButterKnife.bind(this,v);
         listeners();
-        new setValues().execute();
+        new setNameAsync().execute();
+        new setImageAsync().execute();
         return v;
     }
 
+
     private void listeners(){
-        mCheckButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkPermission();
-            }
-        });
+        Animation shake = AnimationUtils.loadAnimation(getActivity(),R.anim.shake);
+        mNext.startAnimation(shake);
         mNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
-                    ViewPager vp = (ViewPager) getActivity().findViewById(R.id.mainViewPager);
-                    vp.setCurrentItem(3,true);
+                   swipePage();
                 }else {
                    checkPermission();
                 }
@@ -79,7 +79,7 @@ public class PermissionFragment extends Fragment {
         });
     }
 
-    private void checkPermission(){
+    public void checkPermission(){
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_DENIED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, SMS_REQUEST_CODE);
@@ -91,11 +91,20 @@ public class PermissionFragment extends Fragment {
         if(requestCode==SMS_REQUEST_CODE){
             if(grantResults.length>0){
                 if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                    ViewPager vp = (ViewPager) getActivity().findViewById(R.id.mainViewPager);
-                    vp.setCurrentItem(3,true);
+                    swipePage();
                 }
             }
         }
+    }
+
+    private void swipePage(){
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                ViewPager vp = (ViewPager) getActivity().findViewById(R.id.mainViewPager);
+                vp.setCurrentItem(3,true);
+            }
+        });
     }
 
     private Bitmap getBitmapAsync(){
@@ -107,28 +116,44 @@ public class PermissionFragment extends Fragment {
     }
 
 
-    private class setValues extends AsyncTask<Void,Void,Void> {
-
-        Bitmap mImage;
-        String mName;
+    private class setImageAsync extends AsyncTask<Void,Void,Bitmap>{
 
         @Override
-        protected Void doInBackground(Void... params) {
-            mImage = getBitmapAsync();
-            mName = getNameAsync();
-            return null;
+        protected Bitmap doInBackground(Void... params) {
+            return getBitmapAsync();
+
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            if(mImage==null||mName.equalsIgnoreCase(NULL_VALUE)){
-                new setValues().execute();
+        protected void onPostExecute(Bitmap bitmap) {
+            super.onPostExecute(bitmap);
+            if(bitmap==null){
+                new setImageAsync().execute();
             }else {
-                mProfileImage.setImageBitmap(mImage);
-                mProfileName.setText(mName);
+                mProfileImage.setImageBitmap(bitmap);
             }
         }
+
+    }
+
+    private class setNameAsync extends AsyncTask<Void,Void,String> {
+
+        @Override
+        protected String doInBackground(Void... params) {
+            return getNameAsync();
+
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            if(s.equalsIgnoreCase(NULL_VALUE)||s==null){
+                new setNameAsync().execute();
+            }else {
+                mProfileName.setText(s);
+            }
+        }
+
     }
 
     @Override

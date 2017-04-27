@@ -31,10 +31,8 @@ public class ExtraDetailsFragment extends Fragment implements VerificationDone {
 
 
     private static final int SMS_REQUEST_CODE = 564;
-    @BindView(R.id.extraPhoneNo)
-    TextInputEditText mExtraPhoneNo;
-    @BindView(R.id.extraPhoneVerify)
-    Button mVerify;
+    @BindView(R.id.extraPhoneNo) TextInputEditText mExtraPhoneNo;
+    @BindView(R.id.extraPhoneVerify) Button mVerify;
     SmsManager mSmsManager;
     String mRandomNo;
     Fragment mFragment;
