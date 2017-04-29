@@ -4,6 +4,7 @@ package com.nrs.nsnik.signinmodule.fragments;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -88,9 +89,10 @@ public class ExtraDetailsFragment extends Fragment implements VerificationDone {
     private void checkPermission() {
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED ||
                 ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_DENIED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, SMS_REQUEST_CODE);
+            requestPermissions(new String[]{Manifest.permission.SEND_SMS}, SMS_REQUEST_CODE);
         }
     }
+
 
     private boolean validPhoneNo() {
         if (mExtraPhoneNo.getText().toString().isEmpty() || mExtraPhoneNo.getText().toString().length() == 0) {

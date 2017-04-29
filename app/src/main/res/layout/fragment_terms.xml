@@ -6,10 +6,10 @@
 
     <TextView
         style="@style/wrapContent"
-        android:text="@string/terms"
+        android:text="@string/termsawesome"
         android:layout_centerInParent="true"
         android:padding="@dimen/sixteen"
-        android:textSize="36sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-thin"
         android:textColor="@color/white"

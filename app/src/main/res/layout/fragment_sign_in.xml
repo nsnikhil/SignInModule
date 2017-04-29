@@ -4,20 +4,6 @@
     tools:context="com.nrs.nsnik.signinmodule.fragments.SignInFragment">
 
 
-    <TextView
-        style="@style/wrapContent"
-        android:text="@string/signin"
-        android:padding="@dimen/sixteen"
-        android:textSize="36sp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-thin"
-        android:textColor="@color/white"
-        android:layout_margin="@dimen/sixteen"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"/>
-
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/singInGoogleButton"
         style="@style/wrapContent"

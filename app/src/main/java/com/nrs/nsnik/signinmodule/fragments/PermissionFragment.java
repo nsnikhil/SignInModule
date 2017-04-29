@@ -82,7 +82,7 @@ public class PermissionFragment extends Fragment{
     public void checkPermission(){
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED||
                 ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_DENIED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, SMS_REQUEST_CODE);
+            requestPermissions( new String[]{Manifest.permission.SEND_SMS}, SMS_REQUEST_CODE);
         }
     }
 

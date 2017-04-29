@@ -3,9 +3,10 @@
     style="@style/matchParent"
     tools:context="com.nrs.nsnik.signinmodule.fragments.PermissionFragment">
 
-    <ScrollView style="@style/matchParent">
 
-        <RelativeLayout style="@style/matchParent">
+        <RelativeLayout style="@style/matchParent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
 
 
             <com.mikhaellopez.circularimageview.CircularImageView
@@ -28,33 +29,21 @@
                 android:padding="@dimen/sixteen"
                 android:text="@string/logo"
                 android:textColor="@color/white"
-                android:textSize="36sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/profilePermissionHead"
-                style="@style/wrapContent"
-                android:layout_below="@id/profileName"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="@dimen/sixteen"
-                android:gravity="center"
-                android:text="@string/permission"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:theme="@style/buttonColor" />
-
         </RelativeLayout>
-    </ScrollView>
+
 
     <ImageView
         android:id="@+id/profileNextIcon"
         android:layout_width="96dp"
-        android:layout_height="96dp"
         android:layout_alignParentBottom="true"
+        android:layout_height="96dp"
         android:layout_alignParentEnd="true"
         android:contentDescription="@string/imageContentInfo"
         android:src="@drawable/next_icon" />
+
+
 
 </RelativeLayout>

@@ -2,6 +2,8 @@
     <string name="app_name">SignIn Module</string>
     <string name="signInError">SignIn Error</string>
     <string name="extraHeading">Just a few extra details</string>
+    <string name="extraHeadingAwesome">Awesomeness</string>
+    <string name="extraHeadingAwesome2">just a step away</string>
     <string name="verify">Verify</string>
     <string name="retry">Retry</string>
     <string name="permission">We need a few permissions to continue…</string>
@@ -12,6 +14,7 @@
     <string name="imageContentError">imageError</string>
     <string name="logo">App Name</string>
     <string name="terms">By Continuing you agree to the terms and condition</string>
+    <string name="termsawesome">Welcome ! you are just one step away from awesomeness, Accept out terms and condition to proceed</string>
     <string name="signin">Sign in using any one service</string>
 
 
