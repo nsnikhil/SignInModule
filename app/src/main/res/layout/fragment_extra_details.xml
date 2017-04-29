@@ -13,7 +13,6 @@
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
-
             android:text="@string/extraHeadingAwesome"
             android:textColor="@color/white"
             android:textSize="28sp"
@@ -23,7 +22,6 @@
             style="@style/wrapContent"
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
-
             android:layout_gravity="center_horizontal"
             android:text="@string/extraHeadingAwesome2"
             android:textColor="@color/white"

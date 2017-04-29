@@ -1,6 +1,8 @@
 package com.nrs.nsnik.signinmodule.fragments;
 
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -10,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.VideoView;
 
 import com.nrs.nsnik.signinmodule.R;
 
@@ -21,7 +24,9 @@ import butterknife.Unbinder;
 public class LogoFragment extends Fragment {
 
     @BindView(R.id.logoNextIcon) ImageView mNextIcon;
+    @BindView(R.id.logoVideo) VideoView mVideoView;
     private Unbinder mUnbinder;
+    MediaPlayer mMediaPlayer;
 
     public LogoFragment() {
 
@@ -46,6 +51,11 @@ public class LogoFragment extends Fragment {
                 pager.setCurrentItem(1,true);
             }
         });
+        android.widget.MediaController mediaController = new android.widget.MediaController(getActivity());
+        mediaController.setAnchorView(mVideoView);
+        mVideoView.setMediaController(mediaController);
+        mVideoView.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.animation));
+        mVideoView.start();
     }
 
     @Override

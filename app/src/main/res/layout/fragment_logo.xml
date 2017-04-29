@@ -7,11 +7,31 @@
 
     <ImageView
         style="@style/errorImage"
+        android:id="@+id/logoImage"
         android:layout_centerInParent="true"
         android:contentDescription="@string/imageContentInfo"
         android:src="@drawable/launcherlogo"
         android:visibility="visible" />
 
+    <VideoView
+        android:layout_width="100dp"
+        android:id="@+id/logoVideo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logoImage"
+        android:layout_height="100dp" />
+
+    <TextView
+        style="@style/wrapContent"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:layout_above="@id/logoVideo"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/eight"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/extramaking"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/logoNextIcon"
