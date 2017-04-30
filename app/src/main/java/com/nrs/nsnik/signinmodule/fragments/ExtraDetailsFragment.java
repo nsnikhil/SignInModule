@@ -47,15 +47,11 @@ public class ExtraDetailsFragment extends Fragment implements VerificationDone {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_extra_details, container, false);
         mUnbinder = ButterKnife.bind(this, v);
-        initialize();
         listeners();
         mFragment = this;
         return v;
     }
 
-    private void initialize() {
-
-    }
 
     private void listeners() {
         mVerify.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +113,8 @@ public class ExtraDetailsFragment extends Fragment implements VerificationDone {
 
     @Override
     public void swipePage() {
-        ViewPager vp = (ViewPager) getActivity().findViewById(R.id.mainViewPager);
-        vp.setCurrentItem(4, true);
+        mVerify.setEnabled(false);
+        mVerify.setText(getActivity().getResources().getString(R.string.verified));
+        mExtraPhoneNo.setEnabled(false);
     }
 }

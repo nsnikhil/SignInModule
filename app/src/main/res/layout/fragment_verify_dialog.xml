@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/verticalLinearLayout"
     android:layout_width="@dimen/drawerWidth"
+    android:layout_margin="@dimen/sixteen"
     tools:context="com.nrs.nsnik.signinmodule.fragments.dialogFragments.VerifyDialogFragment">
 
     <android.support.design.widget.TextInputLayout

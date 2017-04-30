@@ -6,6 +6,7 @@
     <string name="extraHeadingAwesome2">just a step away</string>
     <string name="extramaking">Love in making…</string>
     <string name="verify">Verify</string>
+    <string name="verified">Verified</string>
     <string name="retry">Retry</string>
     <string name="permission">We need a few permissions to continue…</string>
     <string name="grantpermission">Grant Permission</string>
@@ -14,9 +15,12 @@
     <string name="imageContentInfo">image</string>
     <string name="imageContentError">imageError</string>
     <string name="logo">App Name</string>
+    <string name="hello">Hello!</string>
+    <string name="termsservice">Terms of our service</string>
     <string name="terms">By Continuing you agree to the terms and condition</string>
     <string name="termsawesome">Welcome ! you are just one step away from awesomeness, Accept our terms and condition to proceed</string>
     <string name="signin">Sign in using any one service</string>
+    <string name="termsagree">By continuing  you  agree to all the <a href=''> Terms and Conditions</a></string>
 
 
     <!--SignInAttributes-->

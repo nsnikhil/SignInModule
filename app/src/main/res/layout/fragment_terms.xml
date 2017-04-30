@@ -4,26 +4,63 @@
     tools:context="com.nrs.nsnik.signinmodule.fragments.TermsFragment">
 
 
+    <LinearLayout
+        style="@style/verticalLinearLayout"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profileImage"
+            android:layout_width="@dimen/imageSize"
+            android:layout_height="@dimen/imageSize"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profile" />
+
+        <TextView
+            style="@style/wrapContent"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/sixteen"
+            android:text="@string/hello"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profileName"
+            style="@style/wrapContent"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_horizontal"
+            android:text="@string/logo"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
     <TextView
-        style="@style/wrapContent"
-        android:text="@string/termsawesome"
-        android:layout_centerInParent="true"
-        android:padding="@dimen/sixteen"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
         android:fontFamily="sans-serif-thin"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/termsservice"
         android:textColor="@color/white"
-        android:layout_margin="@dimen/sixteen"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <ImageView
-        android:contentDescription="@string/imageContentInfo"
-        android:id="@+id/termsNextIcon"
+        android:id="@+id/profileNextIcon"
         android:layout_width="96dp"
-        android:src="@drawable/next_icon"
-        android:layout_alignParentEnd="true"
+        android:layout_height="96dp"
         android:layout_alignParentBottom="true"
-        android:layout_height="96dp" />
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/imageContentInfo"
+        android:src="@drawable/next_icon" />
+
 
 </RelativeLayout>

@@ -6,12 +6,11 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.nrs.nsnik.signinmodule.fragments.ExtraDetailsFragment;
 import com.nrs.nsnik.signinmodule.fragments.LogoFragment;
-import com.nrs.nsnik.signinmodule.fragments.PermissionFragment;
-import com.nrs.nsnik.signinmodule.fragments.SignInFragment;
 import com.nrs.nsnik.signinmodule.fragments.TermsFragment;
+import com.nrs.nsnik.signinmodule.fragments.SignInFragment;
 
 
-public class adapterViewPager extends FragmentStatePagerAdapter{
+public class adapterViewPager extends FragmentStatePagerAdapter {
 
 
     public adapterViewPager(FragmentManager fm) {
@@ -20,16 +19,17 @@ public class adapterViewPager extends FragmentStatePagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        if(position==0){
+        if (position == 0) {
             return new LogoFragment();
-        }if(position==1){
+        }
+        if (position == 1) {
             return new SignInFragment();
-        }if(position==2){
-            return new PermissionFragment();
-        }if(position==3){
-            return new ExtraDetailsFragment();
-        }if(position==4){
+        }
+        if (position == 2) {
             return new TermsFragment();
+        }
+        if (position == 3) {
+            return new ExtraDetailsFragment();
         }
         return null;
     }
@@ -37,6 +37,6 @@ public class adapterViewPager extends FragmentStatePagerAdapter{
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 }

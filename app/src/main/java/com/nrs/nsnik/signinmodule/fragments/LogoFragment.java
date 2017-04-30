@@ -26,7 +26,6 @@ public class LogoFragment extends Fragment {
     @BindView(R.id.logoNextIcon) ImageView mNextIcon;
     @BindView(R.id.logoVideo) VideoView mVideoView;
     private Unbinder mUnbinder;
-    MediaPlayer mMediaPlayer;
 
     public LogoFragment() {
 
